@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Isha — Always</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Dancing+Script:wght@400;600;700&family=IM+Fell+English:ital@0;1&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Film grain overlay — sits above everything for texture -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Custom cursor glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Floating ambient particles -->
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient music toggle (optional — add your audio file to /audio/ambient.mp3) -->
+  <button class="music-toggle" id="musicToggle" aria-label="Toggle ambient music">
+    <span class="music-icon">♪</span>
+    <span class="music-label">play</span>
+  </button>
+  <audio id="ambientAudio" loop>
+    <!-- <source src="audio/ambient.mp3" type="audio/mpeg" /> -->
+  </audio>
+
+
+  <!-- ================================================
+       SECTION 1 — HERO
+       Replace photos/photo1.jpg with your actual photo
+       ================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" style="background-image: url('photos/photo1.jpg')"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Subtle floating symbols -->
+    <div class="floating-symbols" aria-hidden="true">
+      <span class="sym" style="--x:8%;  --delay:0s;   --dur:9s">✦</span>
+      <span class="sym" style="--x:22%; --delay:2.1s; --dur:11s">·</span>
+      <span class="sym" style="--x:38%; --delay:0.8s; --dur:8s">✦</span>
+      <span class="sym" style="--x:55%; --delay:3.5s; --dur:10s">·</span>
+      <span class="sym" style="--x:70%; --delay:1.2s; --dur:12s">✦</span>
+      <span class="sym" style="--x:85%; --delay:4s;   --dur:9s">·</span>
+      <span class="sym heart" style="--x:14%; --delay:5s;   --dur:14s">♡</span>
+      <span class="sym heart" style="--x:78%; --delay:7s;   --dur:13s">♡</span>
+      <span class="sym heart" style="--x:50%; --delay:2.8s; --dur:16s">♡</span>
+    </div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <p class="hero-for">for</p>
+      <h1 class="hero-name">Isha.</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-title">You are the strongest and most<br />beautiful soul I've ever known.</p>
+      <p class="hero-sub">And I'm endlessly proud of you.</p>
+    </div>
+
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECTION 2 — LOVE LETTER
+       ================================================ -->
+  <section class="letter-section" id="letter">
+    <div class="section-glow glow-left"></div>
+
+    <div class="letter-card reveal-up">
+      <p class="letter-dateline">written for you — always</p>
+
+      <h2 class="letter-heading">My Isha,</h2>
+
+      <p class="letter-body reveal-text" style="--d:0.05s">
+        I don't think words will ever be enough. But I'll keep trying, because you deserve every
+        attempt — every imperfect sentence, every honest feeling I carry for you. You came into
+        my life and quietly rearranged everything. Not loudly, not all at once. Just slowly,
+        the way dawn arrives — until suddenly the whole world looked different and I couldn't
+        remember what it felt like before you.
+      </p>
+
+      <p class="letter-body reveal-text" style="--d:0.2s">
+        I love you in ways I'm still discovering. I love the version of you that laughs too
+        loudly at your own jokes. I love the version of you that's soft and quiet at 2am.
+        And I love the version of you that pushes through even when everything feels impossible —
+        I see that version more than you think. Your strength isn't loud. It's the kind that
+        bends without breaking. The kind that keeps going even when no one is watching.
+      </p>
+
+      <p class="letter-body reveal-text" style="--d:0.35s">
+        I am so <em>profoundly</em> proud of you. Not for what you've achieved — though that
+        is remarkable — but for who you are beneath all of it. For the tenderness you carry.
+        For the way you love people without being asked. For the way you fight for yourself
+        even on the days you forget you're worth fighting for. I haven't forgotten, Isha.
+        I never will.
+      </p>
+
+      <p class="letter-body reveal-text" style="--d:0.5s">
+        I count myself among the luckiest people alive, simply because I get to know you.
+        Because I've seen you at your most ordinary and your most magnificent, and both have
+        left me breathless. You are not background. You are not a side character. You are
+        the whole story — and every version of it is beautiful.
+      </p>
+
+      <p class="letter-body reveal-text" style="--d:0.65s">
+        Thank you for trusting me. Thank you for your realness, your warmth, your patience,
+        your softness. Thank you for existing in this exact shape, at this exact time, in
+        my exact life. I don't take a single moment of you for granted.
+      </p>
+
+      <p class="letter-closing reveal-text" style="--d:0.8s">
+        Yours, completely —<br />
+        <span class="letter-sig">Agam</span>
+      </p>
+
+      <div class="letter-seal">✦</div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECTION 3 — PHOTO MEMORY GALLERY
+       Replace each photo path with your actual images.
+       Add as many cards as you like by duplicating them.
+       ================================================ -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-glow glow-right"></div>
+
+    <div class="section-eyebrow reveal-up">our memories</div>
+    <h2 class="section-title reveal-up">moments I keep<br /><em>coming back to</em></h2>
+
+    <div class="gallery-grid">
+
+      <!-- Polaroid — large. Click to enlarge. -->
+      <div class="polaroid polaroid--lg reveal-up" style="--rot:-2deg; --d:0s"
+           onclick="openLightbox('photos/photo2.jpg')">
+        <div class="polaroid-img" style="background-image:url('photos/photo2.jpg')"></div>
+        <p class="polaroid-caption">you, always</p>
+      </div>
+
+      <!-- Scrapbook card -->
+      <div class="mem-card reveal-up" style="--rot:1.5deg; --d:0.1s"
+           onclick="openLightbox('photos/photo3.jpg')">
+        <div class="mem-img" style="background-image:url('photos/photo3.jpg')"></div>
+      </div>
+
+      <!-- Polaroid — small -->
+      <div class="polaroid polaroid--sm reveal-up" style="--rot:3deg; --d:0.2s"
+           onclick="openLightbox('photos/photo4.jpg')">
+        <div class="polaroid-img" style="background-image:url('photos/photo4.jpg')"></div>
+        <p class="polaroid-caption">my favourite</p>
+      </div>
+
+      <!-- Wide landscape card -->
+      <div class="mem-card mem-card--wide reveal-up" style="--rot:-1deg; --d:0.3s"
+           onclick="openLightbox('photos/photo5.jpg')">
+        <div class="mem-img" style="background-image:url('photos/photo5.jpg')"></div>
+      </div>
+
+      <!-- Polaroid -->
+      <div class="polaroid reveal-up" style="--rot:2deg; --d:0.4s"
+           onclick="openLightbox('photos/photo6.jpg')">
+        <div class="polaroid-img" style="background-image:url('photos/photo6.jpg')"></div>
+        <p class="polaroid-caption">golden</p>
+      </div>
+
+      <!-- Card -->
+      <div class="mem-card reveal-up" style="--rot:-2.5deg; --d:0.5s"
+           onclick="openLightbox('photos/photo1.jpg')">
+        <div class="mem-img" style="background-image:url('photos/photo1.jpg')"></div>
+      </div>
+
+    </div>
+
+    <!-- Lightbox modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Memory" />
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECTION 4 — REASONS I LOVE YOU
+       ================================================ -->
+  <section class="reasons-section" id="reasons">
+    <div class="section-glow glow-center"></div>
+
+    <div class="section-eyebrow reveal-up">reasons</div>
+    <h2 class="section-title reveal-up">why I love you,<br /><em>Isha</em></h2>
+
+    <div class="reasons-grid">
+      <div class="reason-card reveal-float" style="--d:0.00s"><span class="rc-icon">✦</span><p>Your strength inspires me every single day.</p></div>
+      <div class="reason-card reveal-float" style="--d:0.08s"><span class="rc-icon">♡</span><p>You make the world feel softer, just by being in it.</p></div>
+      <div class="reason-card reveal-float" style="--d:0.16s"><span class="rc-icon">✦</span><p>Your smile feels like home.</p></div>
+      <div class="reason-card reveal-float" style="--d:0.24s"><span class="rc-icon">·</span><p>The way you love people — quietly, completely — is extraordinary.</p></div>
+      <div class="reason-card reveal-float" style="--d:0.32s"><span class="rc-icon">♡</span><p>You are brave in ways you don't even recognise.</p></div>
+      <div class="reason-card reveal-float" style="--d:0.40s"><span class="rc-icon">✦</span><p>You turn ordinary moments into something worth remembering.</p></div>
+      <div class="reason-card reveal-float" style="--d:0.48s"><span class="rc-icon">·</span><p>Your laugh is my favourite sound in the world.</p></div>
+      <div class="reason-card reveal-float" style="--d:0.56s"><span class="rc-icon">♡</span><p>You've made me a better person, without even trying.</p></div>
+      <div class="reason-card reveal-float" style="--d:0.64s"><span class="rc-icon">✦</span><p>You are beautifully, completely real. And I love every part.</p></div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECTION 5 — CLOSING
+       Replace photos/photo2.jpg with your best photo
+       ================================================ -->
+  <section class="final-section" id="final">
+    <div class="final-bg" style="background-image:url('photos/photo2.jpg')"></div>
+    <div class="final-overlay"></div>
+    <div class="final-pulse" aria-hidden="true"></div>
+
+    <div class="final-content">
+      <p class="final-pre reveal-up">and always remember, Isha —</p>
+      <h2 class="final-title reveal-up">
+        No matter what happens in life,<br />
+        I will always be<br />
+        proud of you.
+      </h2>
+      <div class="final-rule reveal-up"></div>
+      <p class="final-thanks reveal-up">Thank you for existing.</p>
+      <p class="final-heart reveal-up">♡</p>
+      <p class="final-from reveal-up">— Agam</p>
+    </div>
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
